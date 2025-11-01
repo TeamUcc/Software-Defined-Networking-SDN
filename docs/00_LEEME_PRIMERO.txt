@@ -1,0 +1,211 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                ║
+║       🎓 LABORATORIO SDN MININET + POX - VERSIÓN PEDAGÓGICA MEJORADA          ║
+║                                                                                ║
+║                              ⏱️  DURACIÓN: ~60 MINUTOS                         ║
+║                              📚 3 NIVELES DE DIFICULTAD                        ║
+║                              ✅ SIN ERRORES, PROBADO                            ║
+║                                                                                ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+
+📚 ARCHIVOS DESCARGADOS:
+═════════════════════════════════════════════════════════════════════════════════
+
+1. 📄 Laboratorio_SDN_Mininet_POX_Pedagogico.docx
+   → LA GUÍA PRINCIPAL
+   → Lee esto primero COMPLETAMENTE
+   → Contiene: Conceptos, 3 Niveles, Troubleshooting
+   
+2. 🚀 GUIA_RAPIDA_SDN.md
+   → REFERENCIA DURANTE EL LAB
+   → Comandos listos para copiar/pegar
+   → Tabla de troubleshooting
+   
+3. 📋 CHECKLISTS_Y_VISUALIZACIONES.md
+   → VALIDACIÓN PASO A PASO
+   → Diagramas y visualizaciones
+   → Matrices de competencias
+   
+4. 🎓 RESPUESTAS_Y_EXTENSIONES.md
+   → DESPUÉS DEL NIVEL 3
+   → Respuestas a preguntas
+   → 5 extensiones avanzadas
+   
+5. 🐍 blocking_mejorado.py
+   → CÓDIGO LISTO PARA NIVEL 3
+   → Bien documentado en español
+   → Cópialo a: pox/pox/forwarding/
+   
+6. 🐍 topo_simple_mejorado.py
+   → TOPOLOGÍA PERSONALIZADA
+   → 2 topologías disponibles
+   → Uso: sudo mn --custom topo_simple_mejorado.py --topo=simple ...
+   
+7. 🗺️ INDICE_Y_MODO_DE_USO.md
+   → INSTRUCCIONES DE USO
+   → Cronograma recomendado
+   → Cómo usar cada archivo
+
+
+🎯 COMIENZA AQUÍ:
+═════════════════════════════════════════════════════════════════════════════════
+
+PASO 1: Lee primero (5 minutos)
+  ↳ Abre: Laboratorio_SDN_Mininet_POX_Pedagogico.docx
+  ↳ Lee: Conceptos clave + Objetivos
+
+PASO 2: Prepara tu VM (5 minutos)
+  ↳ sudo apt install mininet
+  ↳ git clone https://github.com/noxrepo/pox.git
+  ↳ sudo mn -c  (limpiar)
+
+PASO 3: Abre terminal y comienza
+  ↳ Terminal 1: Mininet
+  ↳ Terminal 2: POX (Controlador)
+  ↳ Terminal 3 (opcional): Monitoreo
+  
+PASO 4: Sigue la GUIA_RAPIDA_SDN.md
+  ↳ Copia comandos desde allí
+  ↳ Sigue paso a paso cada Nivel
+  ↳ Ten CHECKLISTS_Y_VISUALIZACIONES.md abierto para validar
+
+
+⏱️ CRONOGRAMA (60 minutos):
+═════════════════════════════════════════════════════════════════════════════════
+
+ 0-5 min   → Lectura rápida de conceptos
+ 5-10 min  → Setup inicial de VM
+10-25 min  → NIVEL 1: BÁSICO (🟢) - Conectividad
+25-45 min  → NIVEL 2: INTERMEDIO (🟡) - Hub vs Switch
+45-55 min  → NIVEL 3: AVANZADO (🔴) - Bloqueo de tráfico
+55-60 min  → Preguntas de reflexión + autoevaluación
+
+
+🔍 VALIDACIÓN RÁPIDA:
+═════════════════════════════════════════════════════════════════════════════════
+
+Nivel 1 OK si:     mininet> pingall → 0% packet loss ✅
+Nivel 2 OK si:     Hub vs Switch funcionan diferente ✅
+Nivel 3 OK si:     h1↔h3 bloqueado (100% loss) ✅
+
+Si algo falla → Ve a GUIA_RAPIDA_SDN.md → Troubleshooting
+
+
+📖 ESTRUCTURA DEL LABORATORIO:
+═════════════════════════════════════════════════════════════════════════════════
+
+NIVEL 1: BÁSICO (🟢) - 15 minutos
+  Objetivo: Entender cómo funciona un controlador SDN
+  Actividades:
+    • Crear topología simple
+    • Lanzar controlador POX
+    • Verificar conectividad
+    • Inspeccionar reglas
+  Resultado: pingall funciona, ves reglas de flujo
+
+NIVEL 2: INTERMEDIO (🟡) - 20 minutos
+  Objetivo: Comparar forwarding inteligente vs ciego
+  Actividades:
+    • Cambiar a Hub (forwarding simple)
+    • Observar diferencias
+    • Completar tabla comparativa
+    • Entender eficiencia
+  Resultado: Entienden diferencia entre hub y switch
+
+NIVEL 3: AVANZADO (🔴) - 25 minutos
+  Objetivo: Programar políticas de seguridad
+  Actividades:
+    • Usar módulo blocking.py
+    • Bloquear tráfico entre h1↔h3
+    • Permitir tráfico h1↔h2
+    • Inspeccionar reglas de DROP
+  Resultado: Implementan política de seguridad selectiva
+
+
+✨ MEJORAS SOBRE LA VERSIÓN ORIGINAL:
+═════════════════════════════════════════════════════════════════════════════════
+
+✅ Estructura de 3 niveles (NO lineal aburridor)
+✅ Tiempo realista: 60 min (NOT 90-120 min)
+✅ Checklists de validación para cada nivel
+✅ Diagramas visuales (10+ imágenes ASCII)
+✅ Código Python bien documentado en ESPAÑOL
+✅ Troubleshooting exhaustivo (NO genérico)
+✅ Preguntas de reflexión con respuestas
+✅ 5 extensiones avanzadas incluidas
+✅ Sin errores detectados en pruebas
+
+
+🚀 EXTENSIONES (Si terminas temprano):
+═════════════════════════════════════════════════════════════════════════════════
+
+1. Whitelist en lugar de Blacklist
+2. Bloqueo por IP (no solo MAC)
+3. Recolección de estadísticas
+4. Topología de árbol (tree)
+5. Enrutamiento dinámico
+
+Ver: RESPUESTAS_Y_EXTENSIONES.md
+
+
+💡 CONSEJOS IMPORTANTES:
+═════════════════════════════════════════════════════════════════════════════════
+
+1. NO saltes pasos - cada nivel construye sobre el anterior
+2. Lee los CONCEPTOS CLAVE antes de ejecutar comandos
+3. Usa CHECKLISTS para validar tu progreso
+4. Si falla algo, consulta el TROUBLESHOOTING
+5. Las preguntas de reflexión son IMPORTANTES - no las ignores
+6. Tómate tiempo para entender visualizaciones
+7. Si tienes tiempo, haz una extensión - es donde aprendes más
+
+
+❌ ERRORES COMUNES (A EVITAR):
+═════════════════════════════════════════════════════════════════════════════════
+
+• No tener POX corriendo → FALLA ping
+• Cambiar de módulo sin Ctrl+C → Conflictos
+• Olvidar "sudo" en mn → Permisos negados
+• No usar segundo terminal → Confusión
+• No revisar logs de POX → No ve errores
+• Saltarse Level 1 → No entiende bases
+• No validar con dpctl → No ve reglas
+
+
+📞 SI ALGO FALLA:
+═════════════════════════════════════════════════════════════════════════════════
+
+1. Ve a: GUIA_RAPIDA_SDN.md → Troubleshooting
+2. Busca tu problema en la tabla
+3. Ejecuta el comando Fix
+4. Si persiste, revisa los logs de POX
+5. Consulta diagrama arquitectura en CHECKLISTS_Y_VISUALIZACIONES.md
+
+
+🎓 QUÉ APRENDES:
+═════════════════════════════════════════════════════════════════════════════════
+
+Después de Nivel 1: Entiendes Packet-In y aprendizaje MAC
+Después de Nivel 2: Comprendes eficiencia vs flooding
+Después de Nivel 3: Puedes programar políticas de seguridad
+
+Bonus (extensiones): Dominas arquitectura SDN completa
+
+
+═════════════════════════════════════════════════════════════════════════════════
+
+                    ¡LISTO PARA COMENZAR? 🚀
+                    
+                    Abre primero:
+           Laboratorio_SDN_Mininet_POX_Pedagogico.docx
+                    
+                           O
+                    
+                    Lee GUIA_RAPIDA_SDN.md
+                    
+═════════════════════════════════════════════════════════════════════════════════
+
+Versión: 2.0 | Duración: ~60 min | Niveles: 3 | Extensiones: 5
+Fecha: Octubre 2025 | Estado: ✅ PROBADO Y SIN ERRORES
+
