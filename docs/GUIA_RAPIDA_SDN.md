@@ -29,7 +29,7 @@ chmod +x pox.py
 
 ### Terminal 1 - Crear Topología
 ```bash
-sudo mn --topo single,3 --controller=remote --switch ovsk
+sudo mn --topo single,3 --controller=remote,ip=127.0.0.1,port=6633 --switch ovsk
 ```
 
 **Resultado esperado:**
